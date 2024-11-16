@@ -19,3 +19,117 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+
+main::-webkit-scrollbar {
+  width: 8px;
+}
+
+main::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+main::-webkit-scrollbar-thumb {
+  background: var(--foreground);
+  border-radius: 8px;
+}
+
+main::-webkit-scrollbar-thumb:hover {
+  background: var(--foreground);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*-------------------------------------------------------------*/
+
+.galery {
+  /* display: grid;
+  grid-template-columns: repeat(auto-fit, 25dvh);
+  grid-template-rows: auto; */
+
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 4dvh;
+
+  & .card {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    flex: 1;
+    margin: auto;
+    min-width: 30dvh;
+
+    height: auto;
+    aspect-ratio: 9/16;
+    border-radius: 8px;
+
+  }
+
+  & .card:nth-last-child(1) {
+    max-width: 25dvw;
+  }
+
+  & .card h5 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 16px;
+    color: rgb(151, 213, 255);
+    font-size: 1.8dvh;
+    line-height: 1.8dvh;
+    height: 6dvh;
+    overflow: hidden;
+  }
+}
+
+/* Mobile 2 cards por fila */
+@media(width<=450px) {
+  .galery {
+    & .card {
+      min-width: 18dvh;
+    }
+  }
+}
+
+.card-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-content: flex-start;
+  justify-items: flex-start;
+  justify-content: flex-start;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  padding: 12px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  border-radius: 8px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+
+  & p {
+    font-size: 1.6dvh;
+    margin-top: 12px;
+    /* align-self: flex-end; */
+  }
+}
+
+.card-details:hover {
+  opacity: 1;
+}

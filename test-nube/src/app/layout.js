@@ -23,7 +23,15 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <header className="h-[8dvh] flex items-center justify-start bg-zinc-900 px-6">
+          <nav>
+            <h1>Test <span className="text-sky-600">Nube</span></h1>
+          </nav>
+        </header>
+        <main className="h-[86dvh] p-6 overflow-auto ">{children}</main>
+        <footer className="h-[6dvh] flex items-center justify-end bg-zinc-900 px-6" >
+          <small>© 2023 TestNube</small>
+        </footer>
       </body>
     </html>
   );
