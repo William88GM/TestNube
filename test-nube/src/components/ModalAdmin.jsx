@@ -195,6 +195,11 @@ export default function ModalAdmin({ modalData, setModalData, mangas, setMangas 
             setModalData(null)
             toast.loading("Guardando...", { id: toastId })
 
+            //To do: Eliminar este timeout
+            setTimeout(() => {
+                console.log("SetTimeOut haciendo tiempo para que se vean las notificaciones");
+            }, 200)
+
             fetch(`${endPoint}/api/modifyManga/${formValues.mangaId}`, {
                 method: 'PUT',
                 body: formDataToSend,
@@ -221,7 +226,6 @@ export default function ModalAdmin({ modalData, setModalData, mangas, setMangas 
             console.log("creando... ", formDataToSend);
             toast.loading("Creando...", { id: toastId })
 
-
             setMangas((prev) => [{
                 mal_id: crypto.randomUUID(),
                 title: formValues.title,
@@ -232,6 +236,12 @@ export default function ModalAdmin({ modalData, setModalData, mangas, setMangas 
                     }
                 }
             }, ...prev])
+
+            //To do: Eliminar este timeout
+            setTimeout(() => {
+                console.log("SetTimeOut haciendo tiempo para que se vean las notificaciones");
+            }, 200)
+
             fetch(`${endPoint}/api/create`, {
                 method: 'POST',
                 body: formDataToSend,
@@ -265,6 +275,11 @@ export default function ModalAdmin({ modalData, setModalData, mangas, setMangas 
             (prev) => prev.filter(manga => manga.mal_id !== formValues.mangaId)
         )
         setModalData(null)
+
+        //To do: Eliminar este timeout
+        setTimeout(() => {
+            console.log("SetTimeOut haciendo tiempo para que se vean las notificaciones");
+        }, 200)
 
         fetch(`${endPoint}/api/deleteManga/${formValues.mangaId}`, {
             method: 'DELETE',
