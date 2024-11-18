@@ -3,16 +3,20 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* --background: #ffffff;
+  --foreground: #171717; */
+
+  --background: #171717;
+  --foreground: #ffffff;
 }
 
+/* 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
   color: var(--foreground);
@@ -21,65 +25,69 @@ body {
 }
 
 
-main::-webkit-scrollbar {
+/*--------------------------------SCROLL BAR-------------------------------*/
+
+main::-webkit-scrollbar,
+P::-webkit-scrollbar,
+textarea::-webkit-scrollbar {
   width: 8px;
 }
 
-main::-webkit-scrollbar-track {
+main::-webkit-scrollbar-track,
+P::-webkit-scrollbar-track,
+textarea::-webkit-scrollbar-track {
   background: var(--background);
 }
 
-main::-webkit-scrollbar-thumb {
+main::-webkit-scrollbar-thumb,
+P::-webkit-scrollbar-thumb,
+textarea::-webkit-scrollbar-thumb {
   background: var(--foreground);
   border-radius: 8px;
 }
 
-main::-webkit-scrollbar-thumb:hover {
+main::-webkit-scrollbar-thumb:hover,
+P::-webkit-scrollbar-thumb:hover,
+textarea::-webkit-scrollbar-thumb:hover {
   background: var(--foreground);
 }
 
 
 
 
-
-
-
-
-
-
-
-
-/*-------------------------------------------------------------*/
+/*--------------------------------GALERY---------------------------------*/
 
 .galery {
   /* display: grid;
-  grid-template-columns: repeat(auto-fit, 25dvh);
+  grid-template-columns: repeat(auto-fit, 25vh);
   grid-template-rows: auto; */
 
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 4dvh;
+  gap: 4vh;
+}
 
-  & .card {
-    position: relative;
-    display: flex;
-    align-items: flex-end;
-    flex: 1;
-    margin: auto;
-    min-width: 30dvh;
 
-    height: auto;
-    aspect-ratio: 9/16;
-    border-radius: 8px;
 
-  }
 
-  & .card:nth-last-child(1) {
-    max-width: 25dvw;
-  }
+/*----------------------------------CARD---------------------------------*/
 
-  & .card h5 {
+.card {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  /* flex: 1; */
+  margin: auto;
+  width: 30vh;
+  max-width: 30vw;
+
+  height: auto;
+  aspect-ratio: 9/16;
+  border-radius: 8px;
+  overflow: hidden;
+
+  & h5 {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -87,36 +95,43 @@ main::-webkit-scrollbar-thumb:hover {
     width: 100%;
     margin-bottom: 16px;
     color: rgb(151, 213, 255);
-    font-size: 1.8dvh;
-    line-height: 1.8dvh;
-    height: 6dvh;
+    font-size: 1.8vh;
+    line-height: 1.8vh;
+    height: 6vh;
     overflow: hidden;
   }
+
+}
+
+/*Estilar el ultimo elemento de la galeria*/
+.card:nth-last-child(2) {
+  max-width: 25vw;
 }
 
 /* Mobile 2 cards por fila */
 @media(width<=450px) {
-  .galery {
-    & .card {
-      min-width: 18dvh;
-    }
+  .card {
+    min-width: 16vh;
   }
 }
+
+
+
+
+/*----------------------------CARD DETAILS---------------------------------*/
 
 .card-details {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  align-content: flex-start;
-  justify-items: flex-start;
-  justify-content: flex-start;
   overflow: hidden;
   height: 100%;
   width: 100%;
-  padding: 12px;
   position: absolute;
   top: 0;
   left: 0;
+
+  padding: 12px;
   background-color: rgba(0, 0, 0, 0.9);
   border-radius: 8px;
   border: 2px solid rgba(255, 255, 255, 0.2);
@@ -124,12 +139,52 @@ main::-webkit-scrollbar-thumb:hover {
   transition: opacity .3s ease-in-out;
 
   & p {
-    font-size: 1.6dvh;
+    font-size: 1.6vh;
     margin-top: 12px;
+
     /* align-self: flex-end; */
   }
 }
 
 .card-details:hover {
   opacity: 1;
+}
+
+
+textarea {
+  background-color: var(--foreground);
+  color: var(--background);
+}
+
+input {
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+input:focus {
+  outline: none;
+  background-color: rgb(46, 46, 46);
+}
+
+.input-login {
+  background-color: rgb(77, 77, 77);
+  padding: 4px;
+  border-radius: 8px;
+}
+
+.input-login::placeholder {
+  color: rgb(24, 24, 24);
+  font-weight: bold;
+}
+
+.input-login:focus::placeholder {
+  transition: all 0.3s ease-in-out;
+  color: rgb(158, 158, 158);
+  font-weight: bold;
+}
+
+.button-login:hover {
+  background-color: rgb(46, 46, 46);
+  border: 2px solid rgb(37, 99, 235);
+  padding: 6px;
 }
