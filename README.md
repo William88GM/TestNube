@@ -23,7 +23,7 @@
 <p>- Con un click en la imagen podrás subir una nueva y esta se optimizará a webp</p>
 <p>- En los inputs del formulario se pueden editar los datos del manga</p>
 <p>- En la parte inferior de la modal hay un botón para guardar los cambios, estos se enviarían al back en formato FormData</p>
-<p>- Fuera de la modal, en la parte inferior derecha, hay un botón flotante para agregar un nuevo manga</p>
+<p>- Fuera de la modal, en la parte inferior derecha, hay un botón flotante para agregar un nuevo manga (abre una modal vacía)</p>
 <br/>
 
 <h4>Como el proyecto no está conectado a un backend, cada cambio fallará volverá al estado inicial luego de unos segundos</h4>
