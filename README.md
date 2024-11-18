@@ -33,7 +33,7 @@
 <h3>Desarrollo</h3>
 <br/>
 
-El proyecto está desarrollado en Next.js, por lo que puedes ver la documentación de Next.js para aprender más sobre el desarrollo de aplicaciones web.
+El proyecto está desarrollado en Next.js, por lo que puedes ver la documentación de Next.js mas abajo.
 <br/>
 
 <h3>Despliegue</h3>
