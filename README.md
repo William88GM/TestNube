@@ -1,5 +1,6 @@
 <h1>Test Nube</h1>
 <br/>
+<span>Ésta es una prueba técnica de Frontend</span>
 
 <h3>Pre requisitos</h3>
 <br/>
@@ -19,13 +20,13 @@
 <h3>Navegación</h3>
 <p>En el modo admin, luego de simular iniciar sesión, puedes hacer click sobre un manga y se abrirá una modal para editarlo:</p>
 <p>- Arriba a la izquierda hay un botón para eliminar el manga</p>
-<p>- Con un click en la imagen podrás subir una nueva</p>
+<p>- Con un click en la imagen podrás subir una nueva y esta se optimizará a webp</p>
 <p>- En los inputs del formulario se pueden editar los datos del manga</p>
 <p>- En la parte inferior de la modal hay un botón para guardar los cambios</p>
 <p>- Fuera de la modal, en la parte inferior derecha, hay un botón flotante para agregar un nuevo manga</p>
 <br/>
 
-<h4>Como el proyecto no está conectado a un backend, cada cambio volverá al estado inicial luego de unos segundos</h4>
+<h4>Como el proyecto no está conectado a un backend, cada cambio fallará volverá al estado inicial luego de unos segundos</h4>
 <br/>
 
 <h3>Desarrollo</h3>
