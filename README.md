@@ -1,6 +1,10 @@
 <h1>Test Nube</h1>
 <br/>
 <span>Ésta es una prueba técnica de Frontend</span>
+<br/>
+
+<img src="./test-nube/public/mobile.webp"/>
+
 
 <h3>Pre requisitos</h3>
 <br/>
