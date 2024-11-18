@@ -17,7 +17,7 @@
 <br/>
 
 <h3>Navegación</h3>
-<p>En el modo admin, luego de iniciar sesión, puedes hacer click sobre un manga y se abrirá una modal para editarlo:</p>
+<p>En el modo admin, luego de simular iniciar sesión, puedes hacer click sobre un manga y se abrirá una modal para editarlo:</p>
 <p>- Arriba a la izquierda hay un botón para eliminar el manga</p>
 <p>- En los inputs del formulario se pueden editar los datos del manga</p>
 <p>- En la parte inferior de la modal hay un botón para guardar los cambios</p>
