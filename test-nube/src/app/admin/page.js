@@ -5,7 +5,7 @@ import { ContextSessionProvider } from "@/services/functions/ContextSession";
 import { useRouter } from "next/navigation";
 import { useContext, useEffect } from "react";
 
-export default function page() {
+export default function Admin() {
 
     const { session } = useContext(ContextSessionProvider)
 

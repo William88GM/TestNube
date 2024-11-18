@@ -3,7 +3,7 @@ import { ContextSessionProvider } from "@/services/functions/ContextSession"
 import { useRouter } from "next/navigation"
 import { useContext, useState } from "react"
 
-export default function page() {
+export default function Login() {
 
     const { session, setSession } = useContext(ContextSessionProvider)
     const router = useRouter()
