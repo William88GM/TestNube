@@ -22,6 +22,13 @@
 <p>- Ejecutar el comando `npm run dev` en la carpeta raíz del proyecto</p>
 <br/>
 
+<h3>Variables de entorno </h3>
+<br/>
+<p>En el archivo `.env.example` se encuentran las dos variables:</p>
+[<p>NEXT_PUBLIC_PAGEURL: Se refiere a la url base de la web</p>
+<p>NEXT_PUBLIC_APIENDPOINT: Se refiere a la url base del backend</p>
+<br/>
+
 <h3>Navegación</h3>
 <p>En el modo admin, luego de simular iniciar sesión, puedes hacer click sobre un manga y se abrirá una modal para editarlo:</p>
 <p>- Arriba a la izquierda hay un botón para eliminar el manga</p>
