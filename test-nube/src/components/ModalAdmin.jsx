@@ -329,9 +329,10 @@ export default function ModalAdmin({ modalData, setModalData, mangas, setMangas 
                     <button type="submit">Save</button>
                 </div>
             </form>
+            {/* Click fuera para cerrar la modal: */}
             <div onClick={() => setModalData(null)} className="absolute h-[86vh] z-10 w-[100vw] top-[8vh] left-0 bg-black opacity-70"></div>
         </>}
-        {!modalData && <button onClick={() => setModalData({ title: "", synopsis: "", image: `${process.env.NEXT_PUBLIC_PAGEURL}/placeholder.webp` })} className="absolute bottom-10 right-8 z-10 px-4 py-2 font-bold border-2 border-neutral-50 text-white bg-black rounded-xl" style={{ boxShadow: "0 0 10px 4px rgba(0,0,0,0.5)" }}>+</button>}
+        {!modalData && <button onClick={() => setModalData({ title: "", synopsis: "", image: `${process.env.NEXT_PUBLIC_PAGEURL}/placeholder.webp` })} className="absolute bottom-12 right-10 z-10 px-4 py-2 text-2xl font-bold border-[3px] border-neutral-50 text-white bg-black rounded-xl" style={{ boxShadow: "0 0 10px 4px rgba(0,0,0,0.5)" }}>+</button>}
     </>
     )
 }
