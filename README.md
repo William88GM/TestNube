@@ -2,6 +2,7 @@
 <br/>
 <span>Ésta es una prueba técnica de Frontend</span>
 <br/>
+<br/>
 
 <img src="./test-nube/public/mobile.webp" />
 
