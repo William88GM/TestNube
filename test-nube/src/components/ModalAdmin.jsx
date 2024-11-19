@@ -197,7 +197,7 @@ export default function ModalAdmin({ modalData, setModalData, mangas, setMangas 
             setModalData(null)
             toast.loading("Guardando...", { id: toastId })
 
-            //To do: Eliminar este timeout
+            //To do: Eliminar este timeout 
             // Simular retraso de 2 segundos
             await sleep(2000);
 
