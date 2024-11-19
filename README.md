@@ -25,7 +25,7 @@
 <h3>Variables de entorno </h3>
 <br/>
 <p>En el archivo `.env.example` se encuentran las dos variables:</p>
-[<p>NEXT_PUBLIC_PAGEURL: Se refiere a la url base de la web</p>
+<p>NEXT_PUBLIC_PAGEURL: Se refiere a la url base de la web</p>
 <p>NEXT_PUBLIC_APIENDPOINT: Se refiere a la url base del backend</p>
 <br/>
 
@@ -55,8 +55,11 @@ El proyecto se encuentra desplegado en Vercel.
 Link: https://test-nube.vercel.app/
 <br/>
 <br/>
-
-
+<h6>To do:</h6>
+<p>Descomentar los fetch de login y logout</p>
+<p>Ordenar los estilos de la app</p>
+<p>Simplificar, componetizar y ordenar código</p>
+<br/>
 <h5>Documentación de Next.js</h5>
 <br/>
 
