@@ -12,7 +12,7 @@ export default function Header() {
     // alert(path)
     return (
         <header >
-            <nav className="h-[8vh] bg-zinc-900 px-6  flex items-center justify-between">
+            <nav className="h-[8dvh] bg-zinc-900 px-6  flex items-center justify-between">
                 <Link href={"/"}>
                     <h1>Test <span className="text-sky-600">Nube</span></h1>
                 </Link>

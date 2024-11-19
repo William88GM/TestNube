@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
 
 
           <Header />
-          <main className="h-[86vh] p-6 overflow-auto ">
+          <main className="h-[86dvh] p-6 overflow-auto ">
             {children}
           </main>
 
