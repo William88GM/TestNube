@@ -170,8 +170,10 @@ export default function ModalAdmin({ modalData, setModalData, mangas, setMangas 
     }
 
     //Fetch con el FormData para CREAR o MODIFICAR un manga
-    function handleSubmit(e) {
+    async function handleSubmit(e) {
+
         e.preventDefault();
+        const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
         const toastId = toast('Sonner');
         const endPoint = process.env.NEXT_PUBLIC_API_ENDPOINT;
 
@@ -196,9 +198,8 @@ export default function ModalAdmin({ modalData, setModalData, mangas, setMangas 
             toast.loading("Guardando...", { id: toastId })
 
             //To do: Eliminar este timeout
-            setTimeout(() => {
-                console.log("SetTimeOut haciendo tiempo para que se vean las notificaciones");
-            }, 200)
+            // Simular retraso de 2 segundos
+            await sleep(2000);
 
             fetch(`${endPoint}/api/modifyManga/${formValues.mangaId}`, {
                 method: 'PUT',
@@ -238,9 +239,8 @@ export default function ModalAdmin({ modalData, setModalData, mangas, setMangas 
             }, ...prev])
 
             //To do: Eliminar este timeout
-            setTimeout(() => {
-                console.log("SetTimeOut haciendo tiempo para que se vean las notificaciones");
-            }, 200)
+            // Simular retraso de 2 segundos
+            await sleep(2000);
 
             fetch(`${endPoint}/api/create`, {
                 method: 'POST',
@@ -265,10 +265,12 @@ export default function ModalAdmin({ modalData, setModalData, mangas, setMangas 
     }
 
     //Eliminar un manga
-    function handleEliminate() {
+    async function handleEliminate() {
         const toastId = toast('Sonner');
         const mangasViejos = JSON.parse(JSON.stringify(mangas));
         const endPoint = process.env.NEXT_PUBLIC_API_ENDPOINT
+        const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+
 
         toast.loading("Eliminando manga", { id: toastId })
         setMangas(
@@ -277,9 +279,8 @@ export default function ModalAdmin({ modalData, setModalData, mangas, setMangas 
         setModalData(null)
 
         //To do: Eliminar este timeout
-        setTimeout(() => {
-            console.log("SetTimeOut haciendo tiempo para que se vean las notificaciones");
-        }, 200)
+        // Simular retraso de 2 segundos
+        await sleep(2000);
 
         fetch(`${endPoint}/api/deleteManga/${formValues.mangaId}`, {
             method: 'DELETE',
