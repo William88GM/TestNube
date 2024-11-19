@@ -3,7 +3,7 @@
 <span>Ésta es una prueba técnica de Frontend</span>
 <br/>
 
-<img src="./test-nube/public/mobile.webp"/>
+<img src="./test-nube/public/mobile.webp" />
 
 
 <h3>Pre requisitos</h3>
