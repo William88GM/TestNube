@@ -311,7 +311,7 @@ export default function ModalAdmin({ modalData, setModalData, mangas, setMangas 
 
     return (<>
         {modalData && <>
-            <form onSubmit={handleSubmit} className="absolute gap-3 p-6 z-20 w-[70vh] max-w-[100vw] h-[84vh] top-[9vh] left-[50%] translate-x-[-50%] border-2 border-neutral-800 bg-black flex flex-col items-center justify-start rounded-md">
+            <form onSubmit={handleSubmit} className="absolute gap-3 p-6 z-20 w-[70dvh] max-w-[100dvw] h-[84dvh] top-[9dvh] left-[50%] translate-x-[-50%] border-2 border-neutral-800 bg-black flex flex-col items-center justify-start rounded-md">
                 {formValues.mangaId && <button onClick={handleEliminate} className="absolute top-0 left-0 p-4">
                     <svg viewBox="0 0 24 24" width={"24px"} height={"24px"} fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M18 6L17.1991 18.0129C17.129 19.065 17.0939 19.5911 16.8667 19.99C16.6666 20.3412 16.3648 20.6235 16.0011 20.7998C15.588 21 15.0607 21 14.0062 21H9.99377C8.93927 21 8.41202 21 7.99889 20.7998C7.63517 20.6235 7.33339 20.3412 7.13332 19.99C6.90607 19.5911 6.871 19.065 6.80086 18.0129L6 6M4 6H20M16 6L15.7294 5.18807C15.4671 4.40125 15.3359 4.00784 15.0927 3.71698C14.8779 3.46013 14.6021 3.26132 14.2905 3.13878C13.9376 3 13.523 3 12.6936 3H11.3064C10.477 3 10.0624 3 9.70951 3.13878C9.39792 3.26132 9.12208 3.46013 8.90729 3.71698C8.66405 4.00784 8.53292 4.40125 8.27064 5.18807L8 6M14 10V17M10 10V17" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path> </g>
@@ -330,7 +330,7 @@ export default function ModalAdmin({ modalData, setModalData, mangas, setMangas 
                 </div>
             </form>
             {/* Click fuera para cerrar la modal: */}
-            <div onClick={() => setModalData(null)} className="absolute h-[86vh] z-10 w-[100vw] top-[8vh] left-0 bg-black opacity-70"></div>
+            <div onClick={() => setModalData(null)} className="absolute h-[86dvh] z-10 w-[100dvw] top-[8dvh] left-0 bg-black opacity-70"></div>
         </>}
         {!modalData && <button onClick={() => setModalData({ title: "", synopsis: "", image: `${process.env.NEXT_PUBLIC_PAGEURL}/placeholder.webp` })} className="absolute bottom-12 right-10 z-10 px-4 py-2 text-2xl font-bold border-[3px] border-neutral-50 text-white bg-black rounded-xl" style={{ boxShadow: "0 0 10px 4px rgba(0,0,0,0.5)" }}>+</button>}
     </>
