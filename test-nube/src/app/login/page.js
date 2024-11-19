@@ -24,7 +24,7 @@ export default function Login() {
     function handleSubmit(e) {
         e.preventDefault()
 
-        // fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/api/login`, {
+        // fetch(`${process.env.NEXT_PUBLIC_APIENDPOINT}/api/login`, {
         //     method: "POST",
         //     headers: {
         //         "Content-Type": "application/json",

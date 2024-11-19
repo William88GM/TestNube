@@ -10,7 +10,7 @@ export default function useAutoLogin() {
     useEffect(() => {
         if (session) return
         setLoadingSession(true)
-        fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/api/autologin`)
+        fetch(`${process.env.NEXT_PUBLIC_APIENDPOINT}/api/autologin`)
             .then(res => res.json())
             .then(res => {
                 console.log("RES: ", res)

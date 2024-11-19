@@ -8,7 +8,7 @@ export default function Footer() {
     const router = useRouter()
 
     function handleLogout() {
-        // fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/api/logout`)
+        // fetch(`${process.env.NEXT_PUBLIC_APIENDPOINT}/api/logout`)
         //     .then(res => res.json())
         //     .then(res => {
         //         if (res.status === 200) {

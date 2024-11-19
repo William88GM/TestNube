@@ -5,7 +5,7 @@ export default function ModalAdmin({ modalData, setModalData, mangas, setMangas 
 
     //Formulario controlado
     const [formValues, setFormValues] = useState({
-        image: modalData?.images?.webp?.image_url || `${process.env.NEXT_PUBLIC_PAGEURL}/placeholder.webp`,
+        image: modalData?.images?.webp?.image_url || `/placeholder.webp`,
         title: modalData?.title || "",
         synopsis: modalData?.synopsis || "",
         mangaId: modalData?.mal_id || ""
@@ -15,7 +15,7 @@ export default function ModalAdmin({ modalData, setModalData, mangas, setMangas 
     useEffect(() => {
         setFormValues(
             {
-                image: modalData?.images?.webp?.image_url || `${process.env.NEXT_PUBLIC_PAGEURL}/placeholder.webp`,
+                image: modalData?.images?.webp?.image_url || `/placeholder.webp`,
                 title: modalData?.title || "",
                 synopsis: modalData?.synopsis || "",
                 mangaId: modalData?.mal_id || ""
@@ -175,7 +175,7 @@ export default function ModalAdmin({ modalData, setModalData, mangas, setMangas 
         e.preventDefault();
         const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
         const toastId = toast('Sonner');
-        const endPoint = process.env.NEXT_PUBLIC_API_ENDPOINT;
+        const endPoint = process.env.NEXT_PUBLIC_APIENDPOINT;
 
         //Si la modal tiene una mangaID, es que se está editando, sino, se está creando
         if (modalData.mal_id) {
@@ -268,7 +268,7 @@ export default function ModalAdmin({ modalData, setModalData, mangas, setMangas 
     async function handleEliminate() {
         const toastId = toast('Sonner');
         const mangasViejos = JSON.parse(JSON.stringify(mangas));
-        const endPoint = process.env.NEXT_PUBLIC_API_ENDPOINT
+        const endPoint = process.env.NEXT_PUBLIC_APIENDPOINT
         const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
 
@@ -319,7 +319,7 @@ export default function ModalAdmin({ modalData, setModalData, mangas, setMangas 
                 </button>}
                 <button onClick={() => setModalData(null)} className="absolute top-0 right-0 pr-4 p-2 text-white text-3xl bg-black rounded-md">×</button>
 
-                <img onClick={() => document.getElementById(`file-input`).click()} className="cursor-pointer w-[18vh] rounded-md " style={{ aspectRatio: "9/16" }} src={formValues.image || `${process.env.NEXT_PUBLIC_PAGEURL}/placeholder.webp`} alt={modalData.title} />
+                <img onClick={() => document.getElementById(`file-input`).click()} className="cursor-pointer w-[18vh] rounded-md " style={{ aspectRatio: "9/16" }} src={formValues.image || `/placeholder.webp`} alt={modalData.title} />
                 <input accept="image/*" type="file" id={`file-input`} style={{ display: 'none' }} onChange={(event) => handleFileChange(event)} />
                 <input onChange={handleChange} type="text" className="w-100 text-center text-pretty " style={{ width: "100%" }} value={formValues.title} name="title" />
                 <textarea onChange={handleChange} style={{ color: "#ffffff", backgroundColor: "#171717", width: "100%", height: "100%", outline: "none" }} className="w-100 text-center pr-3 text-pretty overflow-auto" value={formValues.synopsis} name="synopsis"></textarea>
@@ -331,7 +331,7 @@ export default function ModalAdmin({ modalData, setModalData, mangas, setMangas 
             </form>
             <div onClick={() => setModalData(null)} className="absolute h-[86vh] z-10 w-[100vw] top-[8vh] left-0 bg-black opacity-70"></div>
         </>}
-        {!modalData && <button onClick={() => setModalData({ title: "", synopsis: "", image: `${process.env.NEXT_PUBLIC_PAGEURL}/vercel.svg` })} className="absolute bottom-10 right-8 z-10 px-4 py-2 font-bold border-2 border-neutral-50 text-white bg-black rounded-xl" style={{ boxShadow: "0 0 10px 4px rgba(0,0,0,0.5)" }}>+</button>}
+        {!modalData && <button onClick={() => setModalData({ title: "", synopsis: "", image: `/placeholder.webp` })} className="absolute bottom-10 right-8 z-10 px-4 py-2 font-bold border-2 border-neutral-50 text-white bg-black rounded-xl" style={{ boxShadow: "0 0 10px 4px rgba(0,0,0,0.5)" }}>+</button>}
     </>
     )
 }
